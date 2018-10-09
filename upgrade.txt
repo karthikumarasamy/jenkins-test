@@ -1,0 +1,176 @@
+<Upgrade Id="{734B1EB9-0BB6-44CC-B3B6-D9AC43633E37}">
+      <UpgradeVersion Maximum="3.1.0.6" Property="MYAHUPGRADE" MigrateFeatures="yes" ExcludeLanguages="yes" />
+      <UpgradeVersion Minimum="3.1.0.6" Property="MYAHDOWNGRADE" OnlyDetect="yes" />
+    </Upgrade>
+    <InstallExecuteSequence>
+      <Custom Action="SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="CommonFilesFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="ProgramMenuFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="ACTAWE" Sequence="10" />
+      <Custom Action="CAMYAH" Sequence="210">MYAHDOWNGRADE</Custom>
+      <Custom Action="CA_WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="701" />
+      <Custom Action="CA_SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="702" />
+      <Custom Action="ACTEZ" Sequence="801">SRCDIR</Custom>
+      <Custom Action="ACTADZ" Sequence="802">(NOT SRCDIR AND (REINSTALL OR ADSTALL )) OR PATCH</Custom>
+      <Custom Action="ACTEX" Sequence="990">SRCDIR</Custom>
+      <Custom Action="ACTADX" Sequence="991">(NOT SRCDIR AND (REINSTALL OR ADSTALL )) OR PATCH</Custom>
+      <Custom Action="CA51_1" Sequence="992">NOT SRCDIR</Custom>
+      <Custom Action="ACTEY" Sequence="1001">SRCDIR</Custom>
+      <Custom Action="ACTADY" Sequence="1002">(NOT SRCDIR AND (REINSTALL OR ADSTALL )) OR PATCH</Custom>
+      <ResolveSource Sequence="810">NOT SRCDIREX </ResolveSource>
+      <LaunchConditions Sequence="100" />
+      <FindRelatedProducts Sequence="200">SRCDIR or REINSTALL or ADSTALL </FindRelatedProducts>
+      <AppSearch Sequence="400">SRCDIR or REINSTALL or ADSTALL </AppSearch>
+      <CCPSearch Sequence="500">NOT Installed AND (SRCDIR or ADSTALL )</CCPSearch>
+      <RMCCPSearch Sequence="600">NOT Installed AND (SRCDIR or ADSTALL )</RMCCPSearch>
+      <ValidateProductID Sequence="700">SRCDIR or REINSTALL or ADSTALL </ValidateProductID>
+      <CostInitialize Sequence="800" />
+      <FileCost Sequence="900">SRCDIR or REINSTALL or ADSTALL </FileCost>
+      <CostFinalize Sequence="1000" />
+      <SetODBCFolders Sequence="1100">SRCDIR or REINSTALL or ADSTALL </SetODBCFolders>
+      <MigrateFeatureStates Sequence="1200">SRCDIR or REINSTALL or ADSTALL </MigrateFeatureStates>
+      <InstallValidate Sequence="1400">SRCDIR or REINSTALL or ADSTALL </InstallValidate>
+      <InstallInitialize Sequence="1500">SRCDIR or REINSTALL or ADSTALL </InstallInitialize>
+      <AllocateRegistrySpace Sequence="1550">NOT Installed AND (SRCDIR OR ADSTALL )</AllocateRegistrySpace>
+      <ProcessComponents Sequence="1600">SRCDIR or REINSTALL or ADSTALL </ProcessComponents>
+      <UnpublishComponents Sequence="1700">SRCDIR or REINSTALL or ADSTALL </UnpublishComponents>
+      <UnpublishFeatures Sequence="1800">SRCDIR or REINSTALL or ADSTALL </UnpublishFeatures>
+      <StopServices Sequence="1900">VersionNT AND (SRCDIR or REINSTALL or ADSTALL )</StopServices>
+      <DeleteServices Sequence="2000">VersionNT AND (SRCDIR or REINSTALL or ADSTALL )</DeleteServices>
+      <UnregisterComPlus Sequence="2100">SRCDIR or REINSTALL or ADSTALL </UnregisterComPlus>
+      <SelfUnregModules Sequence="2200">SRCDIR or REINSTALL or ADSTALL </SelfUnregModules>
+      <UnregisterTypeLibraries Sequence="2300">SRCDIR or REINSTALL or ADSTALL </UnregisterTypeLibraries>
+      <RemoveODBC Sequence="2400">SRCDIR or REINSTALL or ADSTALL </RemoveODBC>
+      <UnregisterFonts Sequence="2500">SRCDIR or REINSTALL or ADSTALL </UnregisterFonts>
+      <RemoveRegistryValues Sequence="2600">SRCDIR or REINSTALL or ADSTALL </RemoveRegistryValues>
+      <UnregisterClassInfo Sequence="2700">SRCDIR or REINSTALL or ADSTALL </UnregisterClassInfo>
+      <UnregisterExtensionInfo Sequence="2800">SRCDIR or REINSTALL or ADSTALL </UnregisterExtensionInfo>
+      <UnregisterProgIdInfo Sequence="2900">SRCDIR or REINSTALL or ADSTALL </UnregisterProgIdInfo>
+      <UnregisterMIMEInfo Sequence="3000">SRCDIR or REINSTALL or ADSTALL </UnregisterMIMEInfo>
+      <RemoveIniValues Sequence="3100">SRCDIR or REINSTALL or ADSTALL </RemoveIniValues>
+      <RemoveShortcuts Sequence="3200">SRCDIR or REINSTALL or ADSTALL </RemoveShortcuts>
+      <RemoveEnvironmentStrings Sequence="3300">SRCDIR or REINSTALL or ADSTALL </RemoveEnvironmentStrings>
+      <RemoveDuplicateFiles Sequence="3400">SRCDIR or REINSTALL or ADSTALL </RemoveDuplicateFiles>
+      <RemoveFiles Sequence="3500">SRCDIR or REINSTALL or ADSTALL </RemoveFiles>
+      <RemoveFolders Sequence="3600">SRCDIR or REINSTALL or ADSTALL </RemoveFolders>
+      <CreateFolders Sequence="3700">SRCDIR or REINSTALL or ADSTALL </CreateFolders>
+      <MoveFiles Sequence="3800">SRCDIR or REINSTALL or ADSTALL </MoveFiles>
+      <InstallFiles Sequence="4000">SRCDIR or REINSTALL or ADSTALL </InstallFiles>
+      <DuplicateFiles Sequence="4210">SRCDIR or REINSTALL or ADSTALL </DuplicateFiles>
+      <PatchFiles Sequence="4090">SRCDIR or REINSTALL or ADSTALL </PatchFiles>
+      <BindImage Sequence="4300">SRCDIR or REINSTALL or ADSTALL </BindImage>
+      <CreateShortcuts Sequence="4500">SRCDIR or REINSTALL or ADSTALL </CreateShortcuts>
+      <RegisterClassInfo Sequence="4600">SRCDIR or REINSTALL or ADSTALL </RegisterClassInfo>
+      <RegisterExtensionInfo Sequence="4700">SRCDIR or REINSTALL or ADSTALL </RegisterExtensionInfo>
+      <RegisterProgIdInfo Sequence="4800">SRCDIR or REINSTALL or ADSTALL </RegisterProgIdInfo>
+      <RegisterMIMEInfo Sequence="4900">SRCDIR or REINSTALL or ADSTALL </RegisterMIMEInfo>
+      <WriteRegistryValues Sequence="5000">SRCDIR or REINSTALL or ADSTALL </WriteRegistryValues>
+      <WriteIniValues Sequence="5100">SRCDIR or REINSTALL or ADSTALL </WriteIniValues>
+      <WriteEnvironmentStrings Sequence="5200">SRCDIR or REINSTALL or ADSTALL </WriteEnvironmentStrings>
+      <RegisterFonts Sequence="5300">SRCDIR or REINSTALL or ADSTALL </RegisterFonts>
+      <InstallODBC Sequence="5400">SRCDIR or REINSTALL or ADSTALL </InstallODBC>
+      <RegisterTypeLibraries Sequence="5500">SRCDIR or REINSTALL or ADSTALL </RegisterTypeLibraries>
+      <SelfRegModules Sequence="5600">SRCDIR or REINSTALL or ADSTALL </SelfRegModules>
+      <RegisterComPlus Sequence="5700">SRCDIR or REINSTALL or ADSTALL </RegisterComPlus>
+      <InstallServices Sequence="5800">VersionNT AND (SRCDIR or REINSTALL or ADSTALL )</InstallServices>
+      <StartServices Sequence="5900">VersionNT AND (SRCDIR or REINSTALL or ADSTALL )</StartServices>
+      <RegisterUser Sequence="6000">SRCDIR or REINSTALL or ADSTALL </RegisterUser>
+      <RegisterProduct Sequence="6100">SRCDIR or REINSTALL or ADSTALL </RegisterProduct>
+      <PublishComponents Sequence="6200">SRCDIR or REINSTALL or ADSTALL </PublishComponents>
+      <PublishFeatures Sequence="6300">SRCDIR or REINSTALL or ADSTALL </PublishFeatures>
+      <PublishProduct Sequence="6400">SRCDIR or REINSTALL or ADSTALL </PublishProduct>
+      <InstallFinalize Sequence="6600">SRCDIR or REINSTALL or ADSTALL </InstallFinalize>
+      <MsiPublishAssemblies Sequence="6250">SRCDIR or REINSTALL or ADSTALL </MsiPublishAssemblies>
+      <MsiUnpublishAssemblies Sequence="1750">SRCDIR or REINSTALL or ADSTALL </MsiUnpublishAssemblies>
+    </InstallExecuteSequence>
+    <InstallUISequence>
+      <Custom Action="WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="CommonFilesFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="ProgramMenuFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="ACTAWE" Sequence="10" />
+      <Custom Action="CAMYAH" Sequence="210">MYAHDOWNGRADE</Custom>
+      <Custom Action="CA_WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="601" />
+      <Custom Action="CA_SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="602" />
+      <Custom Action="ACTEZ" Sequence="801">SRCDIR</Custom>
+      <Custom Action="ACTEX" Sequence="990">SRCDIR</Custom>
+      <Custom Action="CA51_1" Sequence="992">NOT SRCDIR</Custom>
+      <Custom Action="CA50" Sequence="993">NOT SRCDIR</Custom>
+      <Custom Action="ACTEY" Sequence="1001">SRCDIR</Custom>
+      <Show Dialog="FatalError" OnExit="error">FALSE</Show>
+      <Show Dialog="UserExit" OnExit="cancel">FALSE</Show>
+      <Show Dialog="ExitDialog" OnExit="success">FALSE</Show>
+      <Show Dialog="PrepareDlg" Sequence="140">SRCDIR or REINSTALL </Show>
+      <Show Dialog="WelcomeDlg" Sequence="1230">NOT Installed AND (SRCDIR )</Show>
+      <Show Dialog="ResumeDlg" Sequence="1240">Installed AND (RESUME OR Preselected) AND (SRCDIR or REINSTALL )</Show>
+      <Show Dialog="MaintenanceWelcomeDlg" Sequence="1250">Installed AND NOT RESUME AND NOT Preselected AND (SRCDIR or REINSTALL )</Show>
+      <Show Dialog="ProgressDlg" Sequence="1280">SRCDIR or REINSTALL </Show>
+      <LaunchConditions Sequence="100" />
+      <FindRelatedProducts Sequence="200">SRCDIR or REINSTALL </FindRelatedProducts>
+      <AppSearch Sequence="400">SRCDIR or REINSTALL </AppSearch>
+      <CCPSearch Sequence="500">NOT Installed AND (SRCDIR )</CCPSearch>
+      <RMCCPSearch Sequence="600">NOT Installed AND (SRCDIR )</RMCCPSearch>
+      <CostInitialize Sequence="800" />
+      <FileCost Sequence="900">SRCDIR or REINSTALL </FileCost>
+      <ResolveSource Sequence="810">NOT SRCDIREX </ResolveSource>
+      <CostFinalize Sequence="1000" />
+      <MigrateFeatureStates Sequence="1200">SRCDIR or REINSTALL </MigrateFeatureStates>
+      <ExecuteAction Sequence="1300" />
+    </InstallUISequence>
+    <AdminExecuteSequence>
+      <Custom Action="WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="ProgramMenuFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="CommonFilesFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="CA_WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="3" />
+      <Custom Action="CA_SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="4" />
+      <CostInitialize Sequence="800" />
+      <FileCost Sequence="900" />
+      <CostFinalize Sequence="1000" />
+      <InstallValidate Sequence="1400" />
+      <InstallInitialize Sequence="1500" />
+      <InstallAdminPackage Sequence="3900" />
+      <InstallFiles Sequence="4000" />
+      <InstallFinalize Sequence="6600" />
+    </AdminExecuteSequence>
+    <AdminUISequence>
+      <Custom Action="SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="ProgramMenuFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="CommonFilesFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="CA_WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="141" />
+      <Custom Action="CA_SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="142" />
+      <Show Dialog="FatalError" OnExit="error">FALSE</Show>
+      <Show Dialog="UserExit" OnExit="cancel">FALSE</Show>
+      <Show Dialog="ExitDialog" OnExit="success">FALSE</Show>
+      <Show Dialog="PrepareDlg" Sequence="140">SRCDIR or REINSTALL or ADSTALL </Show>
+      <Show Dialog="AdminWelcomeDlg" Sequence="1230">SRCDIR or REINSTALL or ADSTALL </Show>
+      <Show Dialog="ProgressDlg" Sequence="1280">SRCDIR or REINSTALL or ADSTALL </Show>
+      <CostInitialize Sequence="800" />
+      <FileCost Sequence="900">SRCDIR or REINSTALL or ADSTALL </FileCost>
+      <CostFinalize Sequence="1000" />
+      <ExecuteAction Sequence="1300" />
+    </AdminUISequence>
+    <AdvertiseExecuteSequence>
+      <CostInitialize Sequence="800" />
+      <CostFinalize Sequence="1000" />
+      <Custom Action="WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="1" />
+      <Custom Action="CommonFilesFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="ProgramMenuFolder.606747ED_912C_471B_B406_87DCDB2B8F88" Sequence="2" />
+      <Custom Action="CA_WindowsFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="3" />
+      <Custom Action="CA_SystemFolder_x86_VC.AFA96EB4_FA9F_335C_A7CB_36079407553D" Sequence="4" />
+      <InstallValidate Sequence="1400" />
+      <InstallInitialize Sequence="1500" />
+      <CreateShortcuts Sequence="4500" />
+      <RegisterClassInfo Sequence="4600" />
+      <RegisterExtensionInfo Sequence="4700" />
+      <RegisterMIMEInfo Sequence="4900" />
+      <RegisterProgIdInfo Sequence="4800" />
+      <PublishComponents Sequence="6200" />
+      <PublishFeatures Sequence="6300" />
+      <PublishProduct Sequence="6400" />
+      <InstallFinalize Sequence="6600" />
+      <MsiPublishAssemblies Sequence="6250" />
+    </AdvertiseExecuteSequence>
